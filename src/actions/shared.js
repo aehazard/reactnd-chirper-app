@@ -3,6 +3,8 @@ import { receiveUsers } from '../actions/users'
 import { receiveTweets } from '../actions/tweets'
 import { setAuthUser } from '../actions/authedUser'
 
+const AUTHED_ID = 'tylermcginnis'
+
 export function handleInitialData () {
   return (dispatch) => {
     return getInitialData()
