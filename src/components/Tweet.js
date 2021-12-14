@@ -20,7 +20,7 @@ class Tweet extends Component {
     }))
   }
 
-  toParent = (e, d) => {
+  toParent = (e, id) => {
     e.preventDefault()
   }
 
@@ -84,7 +84,7 @@ function mapStateToProps({authedUser, users, tweets}, { id }) {
 
   return {
     authedUser,
-    tweet: tweets
+    tweet: tweet
       ? formatTweet(tweet, users[tweet.author], authedUser, parentTweet)
       : null
   }
